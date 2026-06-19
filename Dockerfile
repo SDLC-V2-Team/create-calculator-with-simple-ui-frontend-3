@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8000
 
 # Tini-style PID 1 isn't strictly needed for Lambda/ECS Fargate but doesn't hurt
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8000"]

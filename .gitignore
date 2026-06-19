@@ -1,19 +1,14 @@
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
 *.egg-info/
-*.egg
-.eggs/
 dist/
 build/
-*.manifest
-*.spec
+*.egg
 
 # Virtual environment
 venv/
-env/
 .venv/
 
 # IDE
@@ -21,9 +16,6 @@ env/
 .idea/
 *.swp
 *.swo
-
-# pytest
-.pytest_cache/
 
 # OS
 .DS_Store

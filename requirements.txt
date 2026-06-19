@@ -1,3 +1,6 @@
-# No external dependencies required.
+# Core dependencies
+# No external packages required; Tkinter comes with Python standard library.
+# For testing: pytest (optional)
+pytest>=7.0
 
 flask
