@@ -1,46 +1,45 @@
-# Simple Calculator CLI
+# Calculator Application
 
-A minimal calculator that supports basic arithmetic operations via a command-line interface.
+A simple yet functional calculator with a graphical user interface built using Tkinter.
 
-## Usage
+## Features
+- Basic arithmetic: addition, subtraction, multiplication, division
+- Expression parsing with parentheses support
+- Clear and backspace buttons
+- Decimal point support
+- Error handling (division by zero, invalid expressions)
 
-Run the script:
+## Architecture
 
-```bash
-python calculator.py
-```
+The application follows a clean separation of concerns:
 
-Then enter expressions in the format `operand operator operand`, for example:
+- `calculator_functions.py`: Contains the core arithmetic logic (`add`, `subtract`, `multiply`, `divide`) and a safe expression parser (`parse_expression`).
+- `ui.py`: Implements the Tkinter GUI that interacts with the core functions.
+- `main.py`: Entry point to launch the application.
 
-```
-> 2 + 3
-5
-> 10.5 * 2
-21.0
-> 8 / 4
-2
-> 5 - 9
--4
-```
+## Getting Started
 
-Type `exit` or `quit` to stop.
+### Prerequisites
+- Python 3.7 or later (Tkinter is included in the standard library)
+- (Optional) `pytest` for running tests
 
-## Supported Operators
-
-- `+` (addition)
-- `-` (subtraction)
-- `*` (multiplication)
-- `/` (division)
-
-## Testing
-
-Tests use `pytest`. Install and run:
+### Running the Calculator
 
 ```bash
-pip install pytest
+python main.py
+```
+
+### Running Tests
+
+```bash
+pip install -r requirements.txt
 pytest tests/
 ```
 
-## Design Decision
+## Design Decisions
 
-Implemented as a single Python script with a CLI, following the architecture decision record (ADR-001 and ADR-002). No external dependencies or web framework required.
+This project was created to align the UI with the pre-existing calculator functions, as outlined in ADR-001. The UI directly calls the core functions for all operations, ensuring consistency and maintainability.
+
+## License
+
+This project is provided as a scaffold for demonstration purposes.
